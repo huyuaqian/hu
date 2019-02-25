@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.unav{
+    background-color: $bg_gray_color;
+    height: 32px;
+    @include clearfix();
+    .unavbox1{//城市左边
+        line-height: 32px;
+        .userlogre{
+            .welcome{
+                margin-right: 10px;
+            }
+            .wellogre a{
+                margin-right: 20px;    
+                &:hover{
+                    color: $font_hover_color;
+                }            
+            }
+            
+        }
+    }
+    .unavbox2{//用户导航
+        line-height: 32px;
+       &>ul>li{
+            position:relative;
+            padding: 0 10px 0 11px;
+            float:left;
+            & a:hover{
+               color:$font_hover_color;
+            }
+           &:nth-of-type(1){                                      
+               p{                  
+                   padding: 0 20px 0 14px;
+               }
+               .mybox{
+                   width: 184px;
+               }             
+           }
+           &:nth-of-type(4){
+               padding: 0;              
+               p{
+                   padding: 0 10px 0 11px;
+               }
+               .mybox{
+                   width: 70px;
+                   left: 0;
+               }
+           }
+           &:nth-of-type(2){
+               &:before{
+                   display: block;
+                   content:"";
+                   float: left;
+                   width: 12px;
+                   height: 11px;
+                   margin: 10px 3px 0 0;
+                   background: url(../img/index.png) no-repeat -78px 0;
+                   
+               }
+           }
+            //购物车          
+           i{
+               display: inline-block;
+               width: 6px;
+               height: 3px;
+               margin: 0 0 0 5px;
+               background: url(../img/index.png) no-repeat -92px 0px;
+               vertical-align: middle;
+           }
+           em{
+               display: inline-block;
+               width: 43px;
+               height: 15px;
+               margin: 8px 0 0 12px;               
+           }
+           a{
+               &:nth-of-type(1) em{
+                   background: url(../img/base.png) no-repeat 0px 0px;
+               }
+               &:nth-of-type(2) em{
+                   background: url(../img/base.png) no-repeat -93px -82px;
+               }
+           }
+           
+       }
+       .box2_list{            
+            &:hover p{
+                   border-color:#3a9900;
+                   background-color: $bg_white_color;
+            }
+            &:hover .mybox{
+               display: block;
+           }
+           p{
+               position:relative;
+               border: 1px solid $bg_gray_color;
+               border-bottom:none;
+               z-index: 200;
+           }
+            
+       }
+       .usernavxian{
+           margin: 0px -10px;
+           color: #e3dde3;
+       }      
+       .mybox{
+               position: absolute;
+               width: 92px;
+               top: 31px;
+               left: 11px;
+               display: none;
+               border: 1px solid #3a9900;
+               padding: 5px;
+               z-index: 101;
+               background-color: $bg_white_color;
+               li{
+                   &:nth-of-type(1){
+                       width: 184px;
+                   }
+                   width: 92px;
+                   float:left;
+                   a{
+                       display: inline-block;
+                       height: 25px;
+                       line-height: 25px;
+                       padding: 0 7px;
+                       color: #646464;
+                       &:hover{
+                           background-color:$bg_gray_color;
+                           color:$font_color !important;
+                       }
+                   }
+                   .myboxlogin{
+                      li:nth-of-type(1){
+                          width: 92px;
+                      }
+                   }
+                }    
+            } 
+    }
+    //城市图标背景
+    .citybox p{
+        margin-right: 20px;
+               span{
+                  padding-left: 15px;
+                  background: url(../img/index.png) no-repeat -101px -9px; 
+               } 
+               a{
+                   position: relative;
+                   padding: 0 20px 0 14px;
+               }
+        }
+}

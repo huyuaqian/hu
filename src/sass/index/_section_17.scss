@@ -1,0 +1,87 @@
+@charset "utf-8"; //设置中文字符
+
+.section_17{        //中下面导航
+    margin-top: 45px;
+    padding-top: 45px;
+    border-top: 2px solid #e7e7e7;
+    background: #f7f7f7;
+    @include clearfix();
+    .wrapper>ul{
+        float: left;
+        margin-left: 70px;
+        overflow: hidden;
+        &>li{
+            position: relative;
+            float: left;
+            width: 144px;
+            margin-right: 70px;
+            h3{
+                height: 26px;
+                margin-bottom: 5px;
+                line-height: 26px;
+                font-size: 16px;
+                color: #6f6f6f;                   
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                top: 12px;
+                right: 0;
+                display: block;
+                width: 1px;
+                height: 78px;
+                background: #e9e9e9;
+            }
+            
+            ul{
+                height: 130px;
+                li{
+                    height: 24px;
+                    line-height: 24px;
+                    color: #9c9c9c;
+                    overflow: hidden;
+                    a{
+                       color: #989898; 
+                    }
+                } 
+            } 
+        }
+    }
+    .section17_code{
+        float: left;
+        width: 284px;
+        @include clearfix();
+        div{
+            position: relative;
+            margin-right: 45px;
+            width: 86px;
+            height: 122px;
+            float: left;
+            span{
+                position: absolute;
+                top: 0;
+                left: -22px;
+                width: 130px;
+                height: 18px;
+                margin-bottom: 18px;
+                font-size: 16px;
+                color: #c60001;
+                text-align: center;
+                overflow: hidden;  
+            }
+            p{
+                position: relative;
+                top: 36px;
+                img{
+                    width: 86px;
+                    height: 86px;
+                }
+            }
+        }
+    }
+    a:hover{
+        color: $font_hover_color!important;
+        text-decoration: underline;
+    }
+}
+    

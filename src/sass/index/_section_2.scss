@@ -1,0 +1,25 @@
+@charset "utf-8"; //设置中文字符
+
+.section_2{
+    overflow: hidden;
+    @include clearfix();
+    .bottom_left{
+        img{
+            width: 240px;
+        }
+    }
+    .section_bottom{
+        
+         @include clearfix();
+    } 
+    .bottom_right_sect2{   
+        div{
+            width: 482px;
+            float: left;
+        } 
+        @include clearfix();
+        img{
+            float: left;
+        }
+    }
+}

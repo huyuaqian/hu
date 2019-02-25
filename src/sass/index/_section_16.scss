@@ -1,0 +1,63 @@
+@charset "utf-8"; //设置中文字符
+
+
+.section_16{        //生鲜水果
+    margin-top: 45px;
+    border-top: 2px solid #3ea600;
+    &>ul{           //水果图片
+        border-left: 1px solid $border_gray_color;
+        @include clearfix();
+        &>li{
+            float: left;
+            width: 241px;
+            height: 364px;
+            border-right: 1px solid $border_gray_color;
+            border-bottom: 1px solid $border_gray_color;
+            &:nth-of-type(5){
+                width: 240px;
+            }
+            h3{
+                height: 82px;
+                font-weight: bold;
+                padding: 0 18px;
+                font-size: 16px;
+                line-height: 82px;
+                text-align: center;
+                cursor: pointer;
+                overflow: hidden;                              
+            }
+            div{
+                text-align: center;
+                a{
+                    display: inline-block;
+                }
+                img{
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto;
+                }
+            }
+            ul{         //导航分类
+                height: 125px;
+                margin-top: 25px;
+                padding-left: 34px;
+                overflow: hidden;
+                @include clearfix();
+                li{
+                    float: left;
+                    width: 95px;
+                    margin-right: 8px;
+                    height: 26px;
+                    line-height: 26px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    ul li{
+        a:hover{
+                color: $font_hover_color;
+                text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@charset "utf-8"; //设置中文字符
+
+
+.wrapper{
+    width:1210px;
+    margin: 0 auto;
+    position: relative;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+a{
+    text-decoration: none;
+    color:$font_color;
+}
+body{
+    color:$font_color;
+    font: 12px/150% Arial, Tahoma,"宋体";
+}
+div{
+    margin: 0;
+}

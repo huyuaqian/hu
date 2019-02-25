@@ -1,0 +1,107 @@
+@charset "utf-8"; //设置中文字符
+.fixed_header .header{
+    width: 100%;
+    background: #fff;
+}
+.header{
+   width: 100%;
+   font-family: "微软雅黑";
+   margin: 35px auto 30px; 
+   .logo{
+       width: 220px;
+       height: 86px;
+   }
+   .wrapper{
+       @include clearfix();
+       div{
+           float: left;
+       }
+       .header_contact{//微信二维码
+           float: right;
+           width: 160px;
+           height: 80px;
+       }
+       
+   }
+   .form{//表单
+   position: relative;
+       width: 625px;
+       margin: 12px 0 0 48px;
+       form{
+           width: 584px;
+           height: 38px;
+           border: 2px solid $header_red_color;
+           float: left;
+           position: relative;
+           span{
+               width: 16px;
+               height: 16px;        
+               position: absolute;
+               background:url(../img/index.png) no-repeat -69px -24px;
+               top:11px;
+               left: 10px;
+           }
+           #search{//搜索
+               width: 98px;
+               height:38px;
+               border: none;
+               font-size:18px;
+               background: $header_red_color;
+               cursor: pointer;
+               color: $bg_white_color;
+               float: right;
+           }
+           #tokeyword{//搜索框
+               width: 450px;
+               height: 36px;
+               padding:0 0 0 32px;
+               color: #bbb;
+               border: none;
+               margin: 0;
+               float: left;
+            }
+       }
+       .search_b{//高级搜索
+           float: right;
+           margin-top: 2px;
+           line-height: 16px;
+           color: #999; 
+           width: 28px;  
+           a:hover{
+               color: $font_hover_color;
+               text-decoration: underline;
+           }       
+       }
+       .groom{//推荐零食
+           height: 18px;
+           padding-top: 8px;
+           a{
+               margin-right: 18px;
+               color: #757575;
+               &:hover{
+                   color:$font_hover_color;
+                   text-decoration: underline;
+               }
+           }       
+        }
+    
+        .notice_input{
+            position: absolute;
+            top: 50px;
+            width: 485px;
+            left: 2px;
+            z-index: 600;
+            height: 200px;
+            background: $bg_white_color;
+            overflow: hidden;
+            ul{
+                overflow: hidden;
+                margin-left: 30px;
+                li{
+                    line-height: 30px;
+                }
+            }
+            
+        }   
+   }
+}

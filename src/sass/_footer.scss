@@ -1,0 +1,87 @@
+@charset "utf-8"; //设置中文字符
+
+.footer{        //底部
+    padding: 25px 0 30px 0;
+    margin-top: 45px;
+    border-top: 2px solid #3ea600;
+    background:$bg_white_color;
+    .footertop{         //底部导航
+            height: 22px;
+            line-height: 22px;
+            color: #989898;
+            overflow: hidden;
+            ul {
+                li{
+                    float: left;
+                        a{
+                            display: inline-block;
+                            padding: 0 18px;
+                            font-size: 14px;  
+                            border-right: 1px solid $font_color;     
+                            &:hover{
+                                color:$font_color;
+                            }     
+                        }                       
+                    }
+                    .last{
+                            padding-left:18px; 
+                            color: $header_red_color;
+                            font-size: 14px;
+                        }
+                }
+            
+            }
+    .footerbottom{      //底部公司信息
+                width: 790px;
+                margin: 28px auto 0;
+                #aa{
+                    text-align: center;
+                }
+                i{
+                    display: inline-block;
+                    width: 112px;
+                    height: 41px;
+                    background: url(../img/bottomicon.png) -0px -0px no-repeat;
+                }
+                &:after{
+                    content: '\0020';
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    font-size: 0;
+                    visibility: hidden;
+                }
+                .pic{
+                    float: left;
+                    img{
+                        width: 200px;
+                        height: 50px;
+                        margin-right: 20px;
+                    }
+                }
+                .copyright{
+                    float: left;
+                    div{
+                        height: 22px;
+                        line-height: 22px;
+                        color: #989898;
+                        overflow: hidden;
+                    }
+                    .beian{
+                        i{
+                            float: left;
+                            position: relative;
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/bottomicon.png) -114px -0px no-repeat;   
+                        }
+                        p{
+                            float: left;
+                            margin: 0px 0px 0px 5px;
+                            color: #989898; 
+                        }
+                    }
+                }
+            }        
+    
+}

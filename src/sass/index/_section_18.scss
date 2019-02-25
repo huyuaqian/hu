@@ -1,0 +1,34 @@
+@charset "utf-8"; //设置中文字符
+
+.section_18{    //楼梯效果
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    z-index: 11;
+    width: 45px;
+    ul{
+        width: 45px;
+        background: $bg_white_color;
+        li{
+            position: relative;
+            display: block;
+            width: 45px;
+            height: 38px;
+            overflow: hidden;
+            border-bottom: 1px dotted #ddd;
+            a{
+                display: block;
+                width: 35px;
+                height: 38px;
+                padding: 0 5px;
+                text-align: center;
+                text-decoration: none;
+                
+            }
+        }
+    }
+}
+.activelouti{
+    color:$bg_white_color;
+    background: #3da601;
+}

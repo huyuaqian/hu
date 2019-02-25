@@ -1,0 +1,268 @@
+@charset "utf-8"; //设置中文字符
+
+.pnav{
+    height: 46px;
+    border-bottom: 2px solid #318700;
+    z-index: 999;
+    width: 100%;
+    @include clearfix();
+    .wrapper{
+        div{
+            float: left;
+        }
+    }   
+    .all_kinds{   //商品大分类   
+        h2{
+            width: 210px;
+            height: 46px;
+            line-height: 46px;
+            color: $bg_white_color;
+            font-size: 16px;
+            text-align: center;
+            background-color:#2d8800;
+        }              
+    }
+    .subnav{    //二级导航
+        position: relative;
+        width: 210px;
+        padding: 12px 0 28px 0;
+        background: #3ea600;
+        font:bold 14px "微软雅黑";
+        li{
+            color: $bg_white_color;
+            float: left;
+            height: 37px;
+            width: 100%;
+            h3{
+                width: 172px;
+                height: 32px;
+                padding: 0 19px;
+                line-height: 32px;
+                overflow: hidden;
+                &:hover{
+                    background: $bg_white_color;
+                    
+                }
+                &:hover a{
+                    color: #3a9900;
+                }
+                b{
+                    display: block;
+                    float: left;
+                    width: 18px;
+                    height: 18px;
+                    margin: 6px 16px 0 0;                
+                }
+                a{
+                    color: $bg_white_color;
+                    &:hover{
+                    text-decoration:underline;
+                }                
+                }
+            }         
+        }
+    }
+    .nav_v ul{      //水平导航
+        width: 760px;
+        height: 46px;
+        padding-left: 19px;
+        font: 16px/38px "Microsoft YaHei";
+        @include clearfix();
+        li{
+            float: left;
+            a{
+                display: inline-block;
+                height: 38px;
+                line-height: 38px;
+                margin: 5px 0 3px 0;
+                padding: 0 11px;
+                text-align: center;
+                &:hover{
+                    color: $font_hover_color;
+                }
+            }
+        }
+    }
+    .cartbutton{    //购物车按钮
+        display: inline;
+        position: absolute;
+        top: -3px;
+        right: 0px;
+        width: 180px;
+        height: 20px;
+        padding: 9px 10px 16px;
+        margin: 5px 1px 1px;
+        line-height: 22px;
+        text-align: center;
+        z-index: 105;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-bottom: none;
+        color:#098A00;
+        @include clearfix();
+        &:hover{
+            height: 21px;
+            border-color:$cart_border_color;
+            background-color: $bg_white_color;
+            em{
+                background-position: 0 -34px;
+            }
+            + .cartbox{
+                display: block;
+                .free{
+                    display: block;
+                }
+            }
+        }
+        i{
+            display: inline-block;
+            width: 27px;
+            height: 20px;
+            vertical-align: middle;
+            background: url(../img/index.png) no-repeat -47px 0;
+        }
+        span{
+            display: inline-block;
+            height: 20px;
+            line-height: 20px;
+            vertical-align: middle;
+            margin-left: 15px;
+            color: $nav_section_blank_color;
+        }
+        em{
+            float: right;
+            width: 10px;
+            height: 6px;
+            margin: 10px 18px 0 5px;           
+            background: url(../img/index.png) no-repeat 0 -40px;
+            overflow: hidden;
+        }        
+    }
+    .bottom_right_sect2{
+        width: 485px;
+        overflow: hidden;
+    }
+    .cartbox{
+        display: none;       //购物车为空时
+        position: absolute;
+        top: 48px;
+        right: 1px;
+        z-index: 104;
+        width: 343px;
+        padding: 15px 0px 8px 15px;
+        background-color: $bg_white_color;
+        border: 1px solid $cart_border_color;
+        overflow: hidden;       
+        .free{
+            display: none;
+            float: none;
+            line-height: 20px;
+            text-align: center;
+            span{
+                display: inline-block;
+                width: 100%;
+                height: 46px;
+                margin-bottom: 6px;
+            }           
+            a{
+                color: #c40000;
+                display: block;
+            }
+        }
+    }
+    
+    .carboxproduct{
+        display: none;
+        float: none!important;
+        h3{
+            height: 15px;
+            line-height: 15px;
+            font-weight: normal;
+            font: bold 14px '微软雅黑';
+        }
+        .productbox{
+            position: relative;
+            width: 333px;
+            height: 288px;
+            overflow: hidden;
+            
+            ul{
+                height: 250px;
+                position: relative;
+                overflow: auto;
+                width: 333px;
+                li{
+                    width: 100%;
+                    height: 52px;
+                    padding: 10px 0;  
+                    @include clearfix();                  
+                }
+            }
+            .proimg{
+                float: left;
+                height: 50px;
+                overflow: hidden;
+                img{
+                    height: 50px;
+                }
+            }
+            .protitle{
+                float: left;
+                width: 120px;
+                height: 52px;
+                padding-left: 10px;
+                line-height: 18px;
+                overflow: hidden;
+            }
+            .pro_price{
+                float: right;
+                padding-right: 10px;
+                .pri{
+                    float: none;
+                }
+                span{
+                    color: #D70011;
+                }
+                .del_btn{
+                    margin-top: 10px;
+                    text-align: right;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .account{
+        height: 32px;
+        line-height: 32px;
+        float: none!important;
+        @include clearfix();
+        .text{
+            display: inline-block;
+        }
+        strong{
+            font-size: 14px;
+            font-weight: bold;
+            color: #df0901;
+            margin-right: 5px; 
+        }
+        .a_btn{
+            float: right;
+            width: 80px;
+            margin-right: 20px;
+            text-align: center;
+            background: #de0800;
+            color: #fff;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            cursor: pointer;
+            a{
+                color:$bg_white_color;
+                &:hover{
+                    color: inherit;
+                }
+                
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,26 @@
+@charset "utf-8"; //设置中文字符
+.section_3{
+    
+    .theme{     //图片盒子
+        position: relative;
+        padding-right: 0px;
+        border-right: 0px solid $border_gray_color;
+        height: 320px;
+        @include clearfix();
+        ul{            
+            position: absolute;
+            float: left;
+            height: 320px;
+            overflow: hidden;
+            li{
+                float: left;
+                width: 242px;
+                height: 320px;
+                overflow: hidden;
+            }
+            
+        }
+    }
+}
+    
+

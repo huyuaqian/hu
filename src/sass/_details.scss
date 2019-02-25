@@ -1,0 +1,297 @@
+@charset "utf-8"; //设置中文字符
+.crumbs{    //层级
+    height: 34px;
+    line-height: 34px;
+    a{
+        display: inline-block;
+        padding: 0 5px; 
+    }
+}
+.detwrap{       //宽度
+    width: 1210px;
+    margin: 0 auto;
+}
+.details{       //放大镜效果
+    width: 970px;
+    .img_magnifier{
+        width: 400px;
+        .preview{
+            height: 400px;
+            width: 400px;
+            border: 1px solid #dcdddd;
+            overflow: hidden;
+            @include clearfix();
+            span{
+                float: left;
+                border: none;
+                position: relative;
+                padding: 0px;
+                cursor: move;
+                margin: 0px;
+                display: block; 
+                img{
+                    width: 400px;
+                    height: 400px;
+                }
+                &:hover {
+                    .jqzoom{
+                        visibility: visible;
+                    }
+                    + .zoomdiv{
+                        visibility: visible;
+                    }
+                }
+            } 
+            .jqzoom{    //小框
+                border: 1px solid #418700;
+                background: $font_hover_color;
+                opacity: 0.3; 
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                visibility: hidden;
+                top: 10px;
+                left: 20px;
+            }
+            .zoomdiv{       //右边显示大框
+                visibility: hidden;
+                top: 34px;
+                left: 481px;
+                width: 400px;
+                height: 400px;
+                display: block;
+                z-index: 100;
+                position: absolute;
+                background: $bg_white_color;
+                border: 1px solid $input_ccc_color;
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+        .spec_scroll{       //下面多个小图
+            width: 402px;
+            margin-top: 5px;
+            overflow: hidden;
+            .det_item{
+               width: 400px;
+                max-height: 160px;
+                overflow: hidden; 
+                @include clearfix();
+                li{
+                    float: left;
+                    width: 60px;
+                    height: 60px;
+                    margin: 6px 25px 2px 0; 
+                    img{
+                        width: 58px;
+                        height: 58px;
+                        border: 1px solid $border_gray_color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .share{     //分享收藏
+            position: relative;
+            margin-top: 10px;
+            @include clearfix();
+            li{
+                position: relative;
+                float: left;
+                padding-right: 10px;
+                vertical-align: middle;
+                cursor: pointer;   
+                padding-left: 16px;              
+                i{
+                    position: absolute;
+                    left: 0;
+                    width: 13px;
+                    top: 3px;
+                    height: 12px;
+                    background: url(../img/details.png) no-repeat;
+                    overflow: hidden;
+                    margin-right: 5px;  
+                }
+                &:nth-of-type(1){
+                    i{
+                        background-position: -76px -38px;
+                    }
+                }
+                &:nth-of-type(2){
+                    i{
+                        background-position: -92px -58px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.det_infor{     //右边商品信息
+    width: 538px; 
+    font-family: "微软雅黑"; 
+    .pro_tit_top{
+         @include clearfix();
+        span{
+            float: left;
+            padding: 0px 3px;
+            margin: 2px 4px 2px 0px;
+            color: $bg_white_color;
+            background-color: #c20312;
+            border-radius: 2px;
+        }
+        h1{
+            width: 504px;
+            height: 36px;
+            margin: 5px 0;
+            font-size:16px;
+            color: #666;    
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .p_infor{
+        height: 40px;
+        margin-bottom: 10px;
+        line-height: 20px;
+        overflow: hidden;        
+        span{
+            color: $details_red_color;
+        }         
+    }
+    .price_wrap{            //价格
+        height: auto;
+        padding-left: 16px;               
+        overflow: hidden;
+        .price_infor{
+            padding-top: 20px;
+            height: 36px;
+            overflow: hidden;
+            background:$bg_gray_color;
+            .detprice{
+                display: inline-block;
+                height: 24px;
+                font-weight: bold;
+                line-height: 24px;
+                font-size: 26px;                
+                color: $details_red_color;
+            }
+            .group{
+                display: inline-block;
+                height: 18px;
+                margin: 6px 10px 0px 10px;
+                padding: 0 5px;
+                line-height: 18px;
+                background: $details_red_color;
+                color: $bg_white_color;
+            }
+        }
+        .loadregion{        //地址
+            height: 34px;
+            overflow: hidden;
+            input{
+                margin-left: 10px;
+                height: 24px;
+                margin-top: 6px;
+                margin-right: 10px;
+                padding: 0 17px 0 5px;
+                line-height: 24px;
+            }
+        }
+        .fuwu{
+            height: 34px;
+            line-height: 34px;
+            span{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+        .det_number{        //购买数量
+             @include clearfix();
+            i{
+                height: 28px;
+                line-height: 28px;
+                display: inline-block;
+                font-style: normal;
+                margin-right: 10px;
+                float: left;
+            }
+            .chose_amount{
+                float: left;
+                display: inline-block;
+                width: 73px;
+                height: 28px;
+                margin-right: 8px;
+                border: 1px solid $boder_details_color;
+                vertical-align: middle;
+                overflow: hidden;
+                 @include clearfix();
+            }
+            span{          
+                width: 13px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                cursor: pointer;
+                overflow: hidden;
+            }
+            .prev{
+                float: left;
+            }
+            .next{
+                float: right;
+            }
+            input{
+                float: left;
+                width: 45px;
+                height: 28px;
+                padding: 0;
+                line-height: 28px;
+                text-align: center;
+                border: none;
+                border-left: 1px solid $boder_details_color;
+                border-right: 1px solid $boder_details_color; 
+            }           
+        }
+        .det_btnbox{            //购物车和下单按钮
+            position: relative;
+            padding-top: 15px;
+            margin-left: 16px;
+            li{               
+                height: 24px;                
+                text-align: center;              
+                font-size: 16px;
+                float: left;
+                margin-right: 20px;
+                cursor: pointer;
+                i{
+                    display: inline-block;
+                    width: 20px;
+                    height: 15px;
+                    margin-right: 6px;
+                    background: url(../img/details.png) no-repeat;
+                    vertical-align: middle;
+                }
+                &:nth-of-type(1){
+                    width: 194px;
+                    color: $bg_white_color;
+                    padding-top: 11px;
+                    padding-bottom: 11px;
+                    background: #c40000;
+                    margin-left: -16px;
+                    i{
+                       background-position: 0 0; 
+                    }
+                }
+                &:nth-of-type(2){
+                    width: 170px;
+                    padding: 10px 8px;
+                    border: 1px solid #c40000;
+                    i{
+                        background-position: -38px -38px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@charset "utf-8"; //设置中文字符
+
+@import "public/color";    //颜色
+@import "public/public";   //公共部分
+@import "public/minxin";
+@import "index/usenav";   //用户信息导航
+@import "header";   //头部搜索
+@import "index/nav";      //商品导航
+@import "index/banner";   //轮播图
+@import "index/rightbox";     //右侧新闻盒子
+@import "index/section";      //主题公共部分
+@import "index/section_1";    //商品第一行
+@import "index/section_2";    //商品第2行
+@import "index/section_3";    //商品第3行
+@import "index/section_4";    //商品第4行
+@import "index/section_5";    //商品1楼
+@import "index/section_15";   //商品11楼
+@import "index/section_16";   //生鲜水果
+@import "index/section_17";   //中下部导航
+@import "index/section_18";   //楼梯效果
+@import "index/section_19";   //右侧购物车
+@import "footer";       //底部
+@import "registor";      //注册
+@import "login";        //登录    
+@import "details";        //详情页    
+@import "cart";        //购物车    
+
+

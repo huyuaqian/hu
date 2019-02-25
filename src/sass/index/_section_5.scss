@@ -1,0 +1,106 @@
+@charset "utf-8"; //设置中文字符
+
+.foolr_r{       //右边
+    width: 968px;
+    .section_top_2{     //右边头部
+            height: 36px;
+            margin: 0 0 2px 30px;
+            font-size: 16px;
+            line-height: 36px;
+            color: $foolr_color_border;
+            li{
+                &:nth-of-type(1){
+                    border-bottom: 2px solid #a1c0f6;
+                    color: $foolr_color_border;
+                }
+                height: 36px;
+                margin-right: 30px;
+                padding: 0 5px;
+                text-align: center;
+                color: $nav_section_blank_color;
+                overflow: hidden;
+                float: left;
+            }
+            :after{
+                content: '\0020';
+                display: block;
+                height: 0;
+                clear: both;
+                font-size: 0;
+                visibility: hidden;
+            }   
+    }
+    .con{
+            border-top: 1px solid #a1c0f6;
+            position: relative;
+            width:968px;
+            @include clearfix();
+        }
+    .content_bottom_2_1{         //右边下面
+        display: block;       
+        //.content_banner  //右边下面盒子
+        &>ul li{
+            &:nth-of-type(1){
+                margin-right: 484px;  
+            }            
+        }      
+    }
+    
+    .content_banner{    // //右边下面盒子
+        position: absolute;
+        top: 0;
+        left: 242px;
+        width: 482px;
+        height: 250px;
+        border-right: 1px solid $border_gray_color;
+        border-bottom: 1px solid $border_gray_color;
+        overflow: hidden;
+        &:hover .bannerlr{
+            display: block;
+        }
+        .bannerlr{
+            display: none;
+            left: 0;
+            width: 100%;
+            margin-left: 0;
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            height: 62px;
+            margin-top: -31px;                
+            span{
+               display: block;
+               width: 28px;
+               height: 62px;
+               color:$bg_white_color;
+               font:400 22px/62px simsun;
+               text-align: center; 
+               background: url(../img/btn.png) no-repeat;
+               
+            }                               
+        }
+        ol{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            z-index: 2;
+            height: 21px;
+            text-align: center;
+            li{
+                float: left;
+                width: 21px;
+                height: 21px;
+                margin: 0 5px;
+                background: url(../img/b_icon.png) no-repeat 0 0;
+                border: 0;
+                &:hover{
+                    background-position: -21px 0;
+                }
+            }
+        }
+    }
+    
+    .content_bottom_2_2{
+        display: none;     
+    }    
+}

@@ -1,0 +1,102 @@
+@charset "utf-8"; //设置中文字符
+
+.section_19{        //右侧导航图和购物车
+    position: fixed;
+    z-index: 9999999;
+    height: 100%;
+    top: 0px;
+    right: 10px;
+    width: 34px;
+    color: $bg_white_color;
+    background: #000000;
+    .section19top{      //购物车
+        position: relative;
+        top: 120px;
+        width: 18px;
+        height: 100px;
+        padding: 10px 8px;
+        text-align: center;
+//      overflow: hidden;
+        cursor: pointer;
+        &:hover{
+            em{
+                background-position: -178px -42px;
+            }
+            span{
+                background: #000000;
+            }
+            background-color:#3DA700 ;
+        }
+        em{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url("http://static.womai.com/zhongliang/city/index/images/cart.jpg") no-repeat -178px -8px;
+        }
+        span{
+            display: inline-block;
+            height: 16px;
+            margin: 8px auto 0;
+            padding: 0 3px;
+            line-height: 16px;
+            border-radius: 3px;
+            background: #3da700;
+            color: $bg_white_color;
+        }
+    }
+    .section19bottom{           //导航收藏等
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        li{
+            position: relative;
+            height: 34px;
+            width: 34px;
+            margin-top: 6px;
+            line-height: 34px;
+            cursor: pointer;
+            
+            span{
+                top: 0px;
+                position: absolute;
+                right: 34px;
+                height: 34px;
+                width: 58px;
+                padding-left: 12px;
+                line-height: 34px;
+                background: #3da700;
+                display: none;
+                overflow: hidden;
+                z-index: 10001;
+            }            
+        &:nth-of-type(2) em{
+            background-position: -34px 0px;
+        }
+        &:nth-of-type(3) em{
+            background-position: -68px 0px;
+        }
+        &:nth-of-type(4) em{
+            background-position: -102px 0px;
+        }
+        &:nth-of-type(5) em{
+            background-position: -136px 0px;
+        }
+        em{
+                display: inline-block;
+                height: 34px;
+                width: 34px;
+                cursor: pointer;
+                overflow: hidden;
+                display: inline-block;
+                background: url("http://static.womai.com/zhongliang/city/index/images/cart.jpg") no-repeat;
+                &:hover{
+                    background-position-y: -34px;
+                    +span{
+                        display: block;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

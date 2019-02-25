@@ -1,0 +1,80 @@
+@charset "utf-8"; //设置中文字符
+
+.rightbox{
+    position: absolute;
+    top: 0px;
+    right:0px;
+    width: 200px;
+    border: 1px solid $border_right_box_color;
+    border-top:1px solid #e8e8e8;
+    background:$bg_white_color;
+    .rightbox_top{      //tab切换
+        width: 202px;
+        overflow: hidden;
+        ul li{
+            float: left;
+            width: 65px;
+            height: 29px;
+            padding: 0 1px;
+            line-height: 29px;
+            text-align: center;
+            border-bottom: 2px solid $bg_white_color;
+            background:#f4f4f4;
+            
+            .ulahover{      //tab切换后的颜色背景
+                color: #0D8700;
+                background: $bg_white_color;
+            }
+        }
+        ol{
+            padding: 41px 16px 12px;
+            height: 75px;
+            display: none;
+            li{
+                height: 21px;
+                line-height: 21px;               
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                list-style-type:disc;
+                a{
+                    &:hover{
+                        color: $font_hover_color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .olactive{
+            border-bottom: 2px solid #4bae00;;
+        }  
+        .showright{
+            display: block;
+        }      
+    }
+    .rightbox_middle{       //手机图标
+        ul{
+            @include clearfix();
+            width: 201px;
+            border-top: 1px solid $border_right_box_color;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            width: 66px;
+            height: 60px;
+            border-bottom: 1px solid $border_right_box_color;
+            border-right: 1px dotted $border_right_box_color;
+            overflow: hidden;
+            text-align: center;
+            img{
+                height: 100%;
+            }
+        }
+    }
+    .rightbox_bottom{       //图片酒
+        img{
+            display: block;
+        }
+    }
+}
