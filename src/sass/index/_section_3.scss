@@ -17,6 +17,18 @@
                 width: 242px;
                 height: 320px;
                 overflow: hidden;
+                img{
+                    position: relative;
+                    width: 252px;
+                    height: 320px;
+                    left:0;
+                    transition: left 0.5s;
+                    &:hover{
+                        left:-10px;
+                        transition: left 0.5s;
+                    }
+                }
+                
             }
             
         }

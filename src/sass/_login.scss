@@ -63,13 +63,18 @@
                     right: 0;
                     cursor: pointer;
                 }
-                label{
+                label:nth-of-type(2n-1){
                     color: $input_notice_color;
                     font-size: 12px;
                     cursor: text;
                     left: 7px;
                     position: absolute;
                     top: 5px;
+                }
+                label:nth-of-type(2n){
+                    display: inline-block;
+                    line-height: 23px;
+                    color: red;
                 }
             }
             .forgetbox{

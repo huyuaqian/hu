@@ -152,6 +152,7 @@ div {
 .unav .unavbox2 .mybox li a:hover {
   background-color: #f5f5f5;
   color: #606060 !important;
+  text-decoration: none;
 }
 .unav .unavbox2 .mybox li .myboxlogin li:nth-of-type(1) {
   width: 92px;
@@ -261,18 +262,19 @@ div {
   text-decoration: underline;
 }
 .header .form .notice_input {
+  display: none;
   position: absolute;
   top: 50px;
   width: 485px;
   left: 2px;
   z-index: 600;
-  height: 200px;
+  height: 300px;
   background: #ffffff;
   overflow: hidden;
 }
 .header .form .notice_input ul {
-  overflow: hidden;
   margin-left: 30px;
+  padding-bottom: 15px;
 }
 .header .form .notice_input ul li {
   line-height: 30px;
@@ -295,6 +297,9 @@ div {
 .pnav .wrapper div {
   float: left;
 }
+.pnav .all_kinds {
+  z-index: 400;
+}
 .pnav .all_kinds h2 {
   width: 210px;
   height: 46px;
@@ -307,6 +312,7 @@ div {
 .pnav .subnav {
   position: relative;
   width: 210px;
+  height: 410px;
   padding: 12px 0 28px 0;
   background: #3ea600;
   font: bold 14px "微软雅黑";
@@ -323,9 +329,6 @@ div {
   padding: 0 19px;
   line-height: 32px;
   overflow: hidden;
-}
-.pnav .subnav li h3:hover {
-  background: #ffffff;
 }
 .pnav .subnav li h3:hover a {
   color: #3a9900;
@@ -571,6 +574,144 @@ div {
   color: inherit;
 }
 
+.all_kinds .subnav ul li:hover h3 {
+  background: #ffffff;
+}
+.all_kinds .subnav ul li:hover h3 + .sub_kinds {
+  display: block;
+}
+.all_kinds .subnav ul li:hover h3 a {
+  color: #3a9900;
+}
+
+.sub_kinds {
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 209px;
+  z-index: 500;
+  width: 757px;
+  height: 419px;
+  padding: 30px 15px 0 15px;
+  border-right: 1px solid #3a9900;
+  border-bottom: 1px solid #3a9900;
+  background-color: #fff;
+  overflow-y: auto;
+}
+.sub_kinds .kinds_box {
+  position: relative;
+  width: 757px;
+  height: 419px;
+  overflow: hidden;
+}
+.sub_kinds .kinds_box .c_kinds {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sub_kinds .kinds_box .c_kinds h4 {
+  position: relative;
+  float: left;
+  width: 86px;
+  height: 22px;
+  font: bold 13px/22px "微软雅黑";
+  color: #333;
+  padding: 6px 20px 6px 0;
+  text-align: right;
+}
+.sub_kinds .kinds_box .c_kinds ul {
+  float: left;
+  width: 580px;
+  line-height: 30px;
+  overflow: hidden;
+  zoom: 1;
+  padding-top: 6px;
+  padding-bottom: 9px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid #eaeaea;
+}
+.sub_kinds .kinds_box .c_kinds ul li {
+  float: left;
+  width: auto;
+  height: 16px;
+  margin: 5px 0;
+  line-height: 16px;
+  border-left: 1px solid #dedede;
+}
+.sub_kinds .kinds_box .c_kinds ul li a {
+  padding: 0 8px;
+  display: inline-block;
+  font: 12px/150% Arial, Tahoma,"宋体";
+}
+
+.banner {
+  width: 800px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.banner ul {
+  display: none;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 0;
+}
+.banner ul li {
+  float: left;
+  height: 450px;
+  width: 800px !important;
+  list-style: none;
+}
+.banner ul li a {
+  display: block;
+  font-weight: bold;
+}
+.banner:hover .left-btn,
+.banner:hover .right-btn {
+  display: block;
+}
+.banner .left-btn,
+.banner .right-btn {
+  display: none;
+  font-size: 22px;
+  width: 28px;
+  height: 62px;
+  line-height: 62px;
+  background: #eee;
+  opacity: 0.7;
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  cursor: pointer;
+}
+.banner .right-btn {
+  right: 30px;
+}
+.banner .left-btn {
+  left: 30px;
+}
+.banner .img-btn-list {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  text-align: center;
+}
+.banner .img-btn-list span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  margin: 0 5px;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.banner .img-btn-list span.current {
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .rightbox {
   position: absolute;
   top: 0px;
@@ -599,7 +740,7 @@ div {
   background: #ffffff;
 }
 .rightbox .rightbox_top ol {
-  padding: 41px 16px 12px;
+  padding: 41px 16px 0px;
   height: 75px;
   display: none;
 }
@@ -876,7 +1017,13 @@ a:hover {
 .bottom_right ul li a img {
   height: 180px;
   width: 180px;
+  transition: all 1s;
   margin: 20px 0 0 29px;
+}
+.bottom_right ul li a img:hover {
+  width: 210px;
+  height: 210px;
+  transition: all 1s;
 }
 .bottom_right .themenews {
   width: 203px;
@@ -984,6 +1131,17 @@ a:hover {
   height: 320px;
   overflow: hidden;
 }
+.section_3 .theme ul li img {
+  position: relative;
+  width: 252px;
+  height: 320px;
+  left: 0;
+  transition: left 0.5s;
+}
+.section_3 .theme ul li img:hover {
+  left: -10px;
+  transition: left 0.5s;
+}
 
 .section_4 {
   margin-top: 30px;
@@ -1014,10 +1172,6 @@ a:hover {
   color: #383838;
   overflow: hidden;
   float: left;
-}
-.foolr_r .section_top_2 li:nth-of-type(1) {
-  border-bottom: 2px solid #a1c0f6;
-  color: #434343;
 }
 .foolr_r .section_top_2 :after {
   content: '\0020';
@@ -1100,6 +1254,26 @@ a:hover {
 }
 .foolr_r .content_bottom_2_2 {
   display: none;
+}
+.foolr_r .content_bottom_2_2 span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.foolr_r .tabsection {
+  border-bottom: 2px solid #a1c0f6;
+  color: #434343;
+}
+.foolr_r .conbot {
+  display: none;
+}
+.foolr_r .tabdivshow {
+  display: block;
+}
+.foolr_r img:hover {
+  left: 10px;
+  transition: left 0.5s;
 }
 
 .section_15 .wrapper::after {
@@ -1302,8 +1476,9 @@ a:hover {
 }
 
 .section_18 {
+  display: none;
   position: fixed;
-  top: 100px;
+  top: 40%;
   left: 10px;
   z-index: 11;
   width: 45px;
@@ -1575,7 +1750,7 @@ a:hover {
   border: #cccccc 1px solid;
   font-size: 14px;
 }
-.regbox label {
+.regbox label:nth-of-type(2n-1) {
   color: #aaaaaa;
   font-size: 14px;
   cursor: text;
@@ -1705,13 +1880,18 @@ a:hover {
   right: 0;
   cursor: pointer;
 }
-.login_width .logincontent .loginbox .userbox label {
+.login_width .logincontent .loginbox .userbox label:nth-of-type(2n-1) {
   color: #aaaaaa;
   font-size: 12px;
   cursor: text;
   left: 7px;
   position: absolute;
   top: 5px;
+}
+.login_width .logincontent .loginbox .userbox label:nth-of-type(2n) {
+  display: inline-block;
+  line-height: 23px;
+  color: red;
 }
 .login_width .logincontent .loginbox .forgetbox {
   line-height: 22px;
@@ -1819,12 +1999,21 @@ a:hover {
   width: 1210px;
   margin: 0 auto;
 }
+.detwrap::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+}
 
 .details {
   width: 970px;
 }
 .details .img_magnifier {
   width: 400px;
+  position: relative;
 }
 .details .img_magnifier .preview {
   height: 400px;
@@ -1840,7 +2029,7 @@ a:hover {
   overflow: hidden;
   visibility: hidden;
 }
-.details .img_magnifier .preview span {
+.details .img_magnifier .preview #spic {
   float: left;
   border: none;
   position: relative;
@@ -1849,17 +2038,17 @@ a:hover {
   margin: 0px;
   display: block;
 }
-.details .img_magnifier .preview span img {
+.details .img_magnifier .preview #spic img {
   width: 400px;
   height: 400px;
 }
-.details .img_magnifier .preview span:hover .jqzoom {
+.details .img_magnifier .preview #spic:hover #sf {
   visibility: visible;
 }
-.details .img_magnifier .preview span:hover + .zoomdiv {
+.details .img_magnifier .preview #spic:hover + #bf {
   visibility: visible;
 }
-.details .img_magnifier .preview .jqzoom {
+.details .img_magnifier .preview #sf {
   border: 1px solid #418700;
   background: #8cb91e;
   opacity: 0.3;
@@ -1870,11 +2059,11 @@ a:hover {
   top: 10px;
   left: 20px;
 }
-.details .img_magnifier .preview .zoomdiv {
+.details .img_magnifier .preview #bf {
   visibility: hidden;
-  top: 34px;
-  left: 481px;
-  width: 400px;
+  top: 0px;
+  left: 411px;
+  width: 450px;
   height: 400px;
   display: block;
   z-index: 100;
@@ -1883,6 +2072,11 @@ a:hover {
   border: 1px solid #cccccc;
   text-align: center;
   overflow: hidden;
+}
+.details .img_magnifier .preview #bf img {
+  width: 800px;
+  height: 800px;
+  position: absolute;
 }
 .details .img_magnifier .spec_scroll {
   width: 402px;
@@ -2135,6 +2329,96 @@ a:hover {
 }
 .det_infor .price_wrap .det_btnbox li:nth-of-type(2) i {
   background-position: -38px -38px;
+}
+
+.list_buy_pop {
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  width: 487px;
+  height: 335px;
+  z-index: 9999;
+}
+.list_buy_pop .buy_pop {
+  width: 485px;
+  border: 1px solid #8cb91e;
+  background: #fff;
+  display: block;
+}
+.list_buy_pop .buy_pop .showIncludeCart {
+  position: relative;
+  z-index: 9888;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_close {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") no-repeat -148px -31px;
+  cursor: pointer;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_icon {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 24px;
+  left: 35px;
+  background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") no-repeat -113px -183px;
+  top: 24px;
+  left: 35px;
+}
+.list_buy_pop .buy_pop .showIncludeCart .pop_btn_r {
+  cursor: pointer;
+  width: 76px;
+  height: 21px;
+  background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") no-repeat -134px -468px;
+  position: absolute;
+  top: 91px;
+  left: 190px;
+  color: #fff;
+  line-height: 21px;
+  font-family: "Microsoft YaHei";
+  text-align: center;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_top {
+  margin-left: 28px;
+  width: 430px;
+  padding-top: 30px;
+  height: 93px;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_top .title {
+  color: #898989;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 52px;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_top .font {
+  color: #595757;
+  padding-left: 52px;
+  padding-top: 13px;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_top .font font {
+  color: #e9001c;
+  font-weight: bold;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_top .btn {
+  padding-top: 12px;
+  padding-left: 52px;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_top .btn .btn_1 {
+  float: left;
+  padding-right: 6px;
+}
+.list_buy_pop .buy_pop .showIncludeCart .buy_pop_top .btn .btn_1 a {
+  width: 99px;
+  height: 21px;
+  display: block;
+  background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") -122px -491px no-repeat;
+  color: #fff;
+  font-family: "Microsoft YaHei";
+  line-height: 21px;
+  text-align: center;
 }
 
 .cart_wrapper {
@@ -2397,6 +2681,11 @@ a:hover {
   overflow: hidden;
   visibility: hidden;
 }
+.cartcontent .ordercont_content_cw .order_count .content_typepro .contype_1 img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #DCDDDD;
+}
 .cartcontent .ordercont_content_cw .order_count .content_typepro .contype_1 input {
   float: left;
   margin: 20px 5px 0 0;
@@ -2579,6 +2868,89 @@ a:hover {
   line-height: 36px;
   font-size: 16px;
   color: #ffffff;
+}
+
+.alert_popup {
+  z-index: 999999;
+  left: 35%;
+  top: 40%;
+  width: 424px;
+  position: fixed;
+}
+.alert_popup i {
+  position: absolute;
+  background: none;
+  color: #565656;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+}
+.alert_popup .alert_top {
+  width: 424px;
+  height: 10px;
+  background: url("http://static.womai.com/zhongliang/commonalert/images/top_bg.png") no-repeat;
+}
+.alert_popup .alert_content {
+  width: 424px;
+  background: #fff;
+}
+.alert_popup .alert_content h3 {
+  padding: 10px 0 20px 30px;
+  color: #333;
+  font-size: 20px;
+  margin: 0;
+}
+.alert_popup .alert_content p {
+  width: 380px;
+  padding: 0 20px;
+  line-height: 1.6em;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+.alert_popup .alert_pop_btn1 {
+  margin-top: 50px;
+}
+.alert_popup .alert_pop_btn1 a {
+  display: inline-block;
+  width: 210px;
+  height: 30px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #78b54f;
+  text-decoration: none;
+}
+.alert_popup .alert_pop_btn1 #alert_confirm {
+  background: #78b54f;
+  color: #fff;
+}
+.alert_popup .alert_pop_btn1 #alert_cancle {
+  background: #fff;
+  color: #7f7f7f;
+}
+.alert_popup .alert_bottom {
+  width: 420px;
+  height: 10px;
+  background: url("http://static.womai.com/zhongliang/commonalert/images/bottom_bg1.png") no-repeat;
+}
+
+.alertlayout {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 765px;
+  opacity: 0.5;
+  background-color: black;
+  z-index: 99999;
+}
+
+.alertbox {
+  display: none;
 }
 
 /*# sourceMappingURL=scss.css.map */

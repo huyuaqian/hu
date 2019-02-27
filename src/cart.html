@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Document</title>
+		<title>我的购物车</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/scss.css" />
 	</head>
@@ -29,7 +29,7 @@
 					<a href="#">登录</a>访问收藏的商品。
 				</p>
 			</div>
-			
+
 			<div class="cart_have">
 				<!--地址信息-->
 				<div class="mycartaddress">
@@ -41,7 +41,7 @@
 						<input type="text" name="cartaddress" id="cartaddress" />
 					</div>
 					<a class="right" href="#">继续购物></a>
-				</div>			
+				</div>
 				<!--主题-->
 				<div class="cartcontent">
 					<div class="order_nav">
@@ -51,7 +51,7 @@
 						<div class="totalwithrule right">
 							<span>
 							已选商品(含预估运费)：
-							<em>￥203.60</em>
+							<em class="allprice">￥203.60</em>
 						</span>
 							<a href="#">去结算</a>
 						</div>
@@ -81,14 +81,14 @@
 								<div class="cw_3">
 									“特惠品”不参与优惠券使用~
 								</div>
-								<div class="totalall">
+								<!--<div class="totalall">
 									<span>
 									重量合计<em>20.946</em>kg
-								</span>
+									</span>
 									<span>
 									金额合计￥<em>197.60</em>
-								</span>
-								</div>
+									</span>
+								</div>-->
 							</div>
 							<div class="order_count">
 								<div class="special_title">
@@ -96,7 +96,7 @@
 								</div>
 								<div class="content_typepro">
 									<div class="contype_1">
-										<input type="checkbox" name="content_checks" id="content_checks" />
+										<input type="checkbox" checked="checked" name="content_checks" id="content_checks" />
 										<a href="#"><img src="http://pic2.womai.com/upload/601/603/606/6400/6402/634208/634208_1_pic60_3327.jpg" /></a>
 										<!--商品图片-->
 										<div class="contype_1_cent">
@@ -108,7 +108,8 @@
 									</div>
 									<div class="contype_2">
 										<!--价格-->
-										￥8.80
+										￥<i>8.80</i>
+
 									</div>
 									<div class="contype_3">
 										<span class="cartprev">-</span>
@@ -121,7 +122,8 @@
 									</div>
 									<div class="contype_5">
 										<!--总价-->
-										￥17.60
+										￥<i>17.60</i>
+
 									</div>
 									<div class="contype_6">
 										<!--操作-->
@@ -129,12 +131,13 @@
 										<a href="#">删除</a>
 									</div>
 								</div>
+
 							</div>
 							<div class="order_amount">
 								<div class="left">
 									<div class="ordercont_edit">
 										<div class="ordercont_checkall">
-											<input type="checkbox" name="chekallorder" id="chekallorder" /> 全选
+											<input type="checkbox" name="chekallorder" checked="checked" id="chekallorder" /> 全选
 										</div>
 										<div class="orderscsc">
 											<a href="#">收藏</a>
@@ -159,15 +162,15 @@
 										预估运费：
 									</span>
 										<span class="items_3">
-										￥6.00
+										￥0.00
 									</span>
 									</div>
 									<div class="ordam_items">
 										<span class="items_2">
 										商品金额：
 									</span>
-										<span class="items_3">
-										￥197.60
+									<span class="items_3 allprice">
+										￥0.00
 									</span>
 									</div>
 									<div class="ordam_items">
@@ -180,13 +183,13 @@
 									</div>
 									<div class="ordam_items allmonery">
 										<span class="items_1">
-										已选 <i>4 </i>件
+										已选 <i>0.00</i>件
 									</span>
 										<span class="items_2">
 										应付金额：
 									</span>
-										<span class="items_3">
-										￥203.60
+									<span class="items_3 allprice">
+										￥0
 									</span>
 									</div>
 									<div class="ordam_btn">
@@ -200,9 +203,33 @@
 			</div>
 
 		</div>
-
+		<div class="alertbox">
+			<div class="alertlayout">
+			
+			</div>
+		<div class="alert_popup">
+			<i id="j_alert">×</i>
+			<div class="alert_top"></div>
+			<div class="alert_content">
+				<h3>提示</h3>
+				<div class="alert_popup_con">
+					<p>您确定要删除吗？</p>
+				</div>
+				<div class="alert_pop_btn1">
+					<a id="alert_confirm" href="javascript:;">确定</a>
+					<a id="alert_cancle" href="javascript:;">取消</a>
+				</div>
+				<div class="alert_bottom">
+					
+				</div>
+			</div>
+		</div>
+		</div>		
 		<!--底部-->
 		<div class="cartfooter"></div>
+		<script src="script/thirdplugins/jquery.js"></script>
+		<script src="script/thirdplugins/jquery.cookie.js"></script>
+		<script src="script/js/cart.js"></script>
 	</body>
 
 </html>

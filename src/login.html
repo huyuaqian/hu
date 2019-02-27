@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Document</title>
+	<title>会员登录</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="css/scss.css"/>
 </head>
@@ -27,24 +27,25 @@
 							请登录中粮我买网
 						</div>
 						<div class="loginbox">
-							<form>
+							<form id="loginform" method="post" action="">
 								<div class="userbox">
-									<label for="username">用户名/邮箱/手机号</label>
-									<input type="text" name="username" id="username"/>
-									<i></i>
+									<label for="firstname">用户名/邮箱/手机号</label>
+									<input type="text" name="firstname" id="firstname"/><br />
+									<span class="name_error"></span>
 									<div class="forgetbox">
 										<p><a href="#">忘记登录密码？</a></p>
 									</div>
 								</div>								
 								<div class="userbox">
 									<label for="password">密码</label>
-									<input type="text" name="password" id="password"/>
-									<i></i>
+									<input type="text" name="password" id="password"/><br />
+									<span class="pass_error"></span>
 								</div>
 								<div class="btn">
-									<input type="submit" name="submitbtn" id="submitbtn" value="登录" />
-									<a href="#">注册</a>
-								</div>								
+									<input type="button" name="submitbtn" id="submitbtn" value="登录" />
+									<a href="http://localhost/js/shangke/projectname/src/registor.html">注册</a>
+								</div>	
+								
 							</form>
 							<div class="ccount">
 								<span>使用合作伙伴账号登录我买网</span>
@@ -57,6 +58,7 @@
 										<i></i>
 										<a href="#">人人网</a>
 									</li>
+									
 									<li>
 										<i></i>
 										<a href="#">开心网</a>
@@ -75,8 +77,7 @@
 	<!--底部-->
 	<div class="logfooter"></div>
 	<script src="script/thirdplugins/jquery.js"></script>
-	<script type="text/javascript">
-		$('.logfooter').load('footer.html');
-	</script>
+	<script src="script/thirdplugins/jquery.validate.js"></script>
+	<script src="script/js/login.js"></script>
 </body>
 </html>

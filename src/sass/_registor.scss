@@ -55,7 +55,7 @@
         border: $input_ccc_color 1px solid;
         font-size: 14px;
     }
-    label{
+    label:nth-of-type(2n-1){
         color: $input_notice_color;
         font-size: 14px;
         cursor: text;

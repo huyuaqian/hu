@@ -4,14 +4,19 @@
 //	});
 //});
 
-$(function() {
-	
+$(function() {	
+		//下拉列表提示		
 	;(function(){
 		$('.top').load('header.html',function(){
+			$('#tokeyword').on('focus',function(){
+				$(this).val('');
+			});
+			$('#tokeyword').on('blur',function(){
+				$(this).val('闹元宵第2件0元  拼手气最高得￥188大红包');
+			});
 			$('#tokeyword').on('input',function(){
-//				console.log($(this).val());
-//				var $script=$('<script src="https://suggest.taobao.com/sug?code=utf-8&q='+$(this).val()+'&_ksTS=1548331259728_369&callback=baidu"><\/script>');
-//				$('body').append($script);
+				var that=$(this);
+				$('.notice_input').css('display','block');
 				var $str='';
 				$.ajax({
 					type:"get",
@@ -24,19 +29,24 @@ $(function() {
 								$str+=`<li>${aa[0]}</li>`;
 							});
 						});
-						$('.notice_input ul').html($str);
+						if(that.val()==''){
+							$('.notice_input').hide();
+						}else{
+							$('.notice_input ul').html($str);
+						}
+						$('.notice_input ul li').each(function(){
+							$(this).on('click',function(){
+								that.val($(this).html());
+								$('.notice_input').css('display','none');
+							})
+						});
+						$('body').on('click',function(){
+							$('.notice_input').css('display','none');
+						})
+											
 					}
 				});
 			});
-			
-			function baidu(data){
-				$arr=data.result;
-				var $str='';
-				$.each($arr,function(index){
-					$str+=`<li>${arr[index][0]}</li>`;
-				});
-				$('.notice_input').html($str);
-			}
 		});
 	})();
 	
@@ -109,5 +119,53 @@ $(function() {
 		});
 
 	})();
+	
+	//商品tab切换
+	;(function() {		
+		var $btns = $('.section_top_2 li');
+		var $contents =$('.conbot');
+		console.log($btns.length);
+		$btns.on('mouseover', function() {
+			$(this).addClass('tabsection').siblings('li').removeClass('tabsection'); //链式操作的核心是最开始的元素对象
+			console.log($(this).parent().parent().find($('.conbot')).eq($(this).index()));
+			console.log($(this).index());
+			$(this).parent().parent().find($('.conbot')).eq($(this).index()).addClass('tabdivshow').siblings('div').removeClass('tabdivshow');
+		});
 
+	})();
+	
+	
+	//轮播图
+	;(function(){
+		bannerListFn(
+		    $(".banner"),
+		    $(".img-btn-list"),
+		    $(".left-btn"),
+		    $(".right-btn"),
+		    2000,
+		    true
+		);
+	})();
+	
+	//商品图片显示效果
+	$('.section_1 .bottom_right li img').on('mouseover',function(){		
+		$(this).parent().parent().find('.themenews p:first a').css('color','#8cb91e');
+	}).on('mouseout',function(){
+		$(this).parent().parent().find('.themenews p:first a').css('color','#606060');
+	});
+	
+	;(function(){
+		$(function(){
+			$('.content_bottom_2_1 img').lazyload({
+				effect:"fadeIn"
+			});
+		})
+	})();
+	
+	//回到顶部
+	$('.section_19 ul li').last().on('click',function(){
+		$('html,body').animate({
+    		scrollTop:0
+    	});
+	});	
 });

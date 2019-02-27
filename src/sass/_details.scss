@@ -10,18 +10,20 @@
 .detwrap{       //宽度
     width: 1210px;
     margin: 0 auto;
+    @include clearfix();
 }
 .details{       //放大镜效果
     width: 970px;
     .img_magnifier{
         width: 400px;
+        position: relative;
         .preview{
             height: 400px;
             width: 400px;
             border: 1px solid #dcdddd;
             overflow: hidden;
             @include clearfix();
-            span{
+            #spic{
                 float: left;
                 border: none;
                 position: relative;
@@ -34,15 +36,15 @@
                     height: 400px;
                 }
                 &:hover {
-                    .jqzoom{
+                    #sf{
                         visibility: visible;
                     }
-                    + .zoomdiv{
+                    + #bf{
                         visibility: visible;
                     }
                 }
             } 
-            .jqzoom{    //小框
+            #sf{    //小框
                 border: 1px solid #418700;
                 background: $font_hover_color;
                 opacity: 0.3; 
@@ -53,11 +55,11 @@
                 top: 10px;
                 left: 20px;
             }
-            .zoomdiv{       //右边显示大框
+            #bf{       //右边显示大框
                 visibility: hidden;
-                top: 34px;
-                left: 481px;
-                width: 400px;
+                top: 0px;
+                left: 411px;
+                width: 450px;
                 height: 400px;
                 display: block;
                 z-index: 100;
@@ -66,6 +68,11 @@
                 border: 1px solid $input_ccc_color;
                 text-align: center;
                 overflow: hidden;
+                img{
+                    width: 800px;
+                    height: 800px;
+                    position: absolute;
+                }
             }
         }
         .spec_scroll{       //下面多个小图
@@ -289,6 +296,97 @@
                     border: 1px solid #c40000;
                     i{
                         background-position: -38px -38px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//添加购物车成功
+.list_buy_pop{
+    position: fixed;
+    left: 50%;
+    top: 60%;
+    width: 487px;
+    height: 335px;
+    z-index: 9999;
+    .buy_pop{
+        width: 485px;
+        border: 1px solid #8cb91e;
+        background: #fff; 
+        display: block;
+        .showIncludeCart{
+            position: relative;
+            z-index: 9888;
+            .buy_pop_close{
+                width: 17px;
+                height: 17px;
+                position: absolute;
+                right: 7px;
+                top: 6px;
+                background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") no-repeat -148px -31px;
+                cursor: pointer;
+            } 
+            .buy_icon{
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                top: 24px;
+                left: 35px;
+                background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") no-repeat -113px -183px;
+                top: 24px;
+                left: 35px;
+            }
+            .pop_btn_r{
+                cursor: pointer;
+                width: 76px;
+                height: 21px;
+                background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") no-repeat -134px -468px;
+                position: absolute;
+                top: 91px;
+                left: 190px;
+                color: #fff;
+                line-height: 21px;
+                font-family: "Microsoft YaHei";
+                text-align: center;
+            }
+            .buy_pop_top{
+                margin-left: 28px;
+                width: 430px;
+                padding-top: 30px;
+                height: 93px;
+                .title{
+                    color: #898989;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding-left: 52px;
+                }
+                .font{
+                    color: #595757;
+                    padding-left: 52px;
+                    padding-top: 13px;
+                    font{
+                        color: #e9001c;
+                        font-weight: bold; 
+                    }
+                }
+                .btn{
+                    padding-top: 12px;
+                    padding-left: 52px;
+                    .btn_1{
+                        float: left;
+                        padding-right: 6px;
+                        a{
+                            width: 99px;
+                            height: 21px;
+                            display: block;
+                            background: url("http://static.womai.com/zhongliang/tuan2014/images/detail/detail_btn.png") -122px -491px no-repeat;
+                            color: #fff;
+                            font-family: "Microsoft YaHei";
+                            line-height: 21px;
+                            text-align: center; 
+                        }
                     }
                 }
             }

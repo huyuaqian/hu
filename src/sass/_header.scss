@@ -86,17 +86,18 @@
         }
     
         .notice_input{
+            display: none;
             position: absolute;
             top: 50px;
             width: 485px;
             left: 2px;
             z-index: 600;
-            height: 200px;
+            height: 300px;
             background: $bg_white_color;
             overflow: hidden;
             ul{
-                overflow: hidden;
                 margin-left: 30px;
+                padding-bottom: 15px;
                 li{
                     line-height: 30px;
                 }

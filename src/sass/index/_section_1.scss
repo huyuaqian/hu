@@ -39,7 +39,13 @@
                 img{
                     height: 180px;
                     width: 180px;
+                    transition: all 1s;
                     margin: 20px 0 0 29px;
+                    &:hover{
+                        width: 210px;
+                        height: 210px;
+                        transition: all 1s;
+                    }
                 }
             }
         }

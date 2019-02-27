@@ -11,7 +11,8 @@
             float: left;
         }
     }   
-    .all_kinds{   //商品大分类   
+    .all_kinds{
+        z-index: 400;  //商品大分类   
         h2{
             width: 210px;
             height: 46px;
@@ -25,6 +26,7 @@
     .subnav{    //二级导航
         position: relative;
         width: 210px;
+        height: 410px;
         padding: 12px 0 28px 0;
         background: #3ea600;
         font:bold 14px "微软雅黑";
@@ -33,16 +35,14 @@
             float: left;
             height: 37px;
             width: 100%;
+            
             h3{
                 width: 172px;
                 height: 32px;
                 padding: 0 19px;
                 line-height: 32px;
                 overflow: hidden;
-                &:hover{
-                    background: $bg_white_color;
-                    
-                }
+                
                 &:hover a{
                     color: #3a9900;
                 }
@@ -57,7 +57,7 @@
                     color: $bg_white_color;
                     &:hover{
                     text-decoration:underline;
-                }                
+                    }                
                 }
             }         
         }
@@ -265,4 +265,83 @@
         }
     }
     
+}
+.all_kinds{
+    .subnav{
+        ul li{
+                &:hover{
+                    h3{
+                        background: $bg_white_color;
+                        + .sub_kinds{
+                            display: block;
+                        }
+                        a{
+                            color: #3a9900;
+                        }
+                }
+            }
+        }
+    }
+    
+}
+.sub_kinds{
+        display: none;
+        position: absolute;
+        top: 2px;
+        left: 209px;
+        z-index: 500;
+        width: 757px;
+        height: 419px;
+        padding: 30px 15px 0 15px;
+        border-right: 1px solid #3a9900;
+        border-bottom: 1px solid #3a9900;
+        background-color: #fff;
+        overflow-y: auto;
+        
+        .kinds_box{
+            position: relative;
+            width: 757px;
+            height: 419px;
+            overflow: hidden;
+            .c_kinds{
+                position: absolute;
+                left: 0;
+                top: 0;
+                h4{
+                    position: relative;
+                    float: left;
+                    width: 86px;
+                    height: 22px;
+                    font: bold 13px/22px "微软雅黑";
+                    color: #333;
+                    padding: 6px 20px 6px 0;
+                    text-align: right;
+                }
+                ul{
+                    float: left;
+                    width: 580px;
+                    line-height: 30px;
+                    overflow: hidden;
+                    zoom: 1;
+                    padding-top: 6px;
+                    padding-bottom: 9px;
+                    margin-bottom: 3px;
+                    border-bottom: 1px solid #eaeaea;
+                    li{
+                        float: left;
+                        width: auto;
+                        height: 16px;
+                        margin: 5px 0;
+                        line-height: 16px;
+                        border-left: 1px solid #dedede;
+                        a{
+                            padding: 0 8px;
+                            display: inline-block;
+                            font: 12px/150% Arial, Tahoma,"宋体";
+                        }
+                    }
+                }
+            }
+        }
+        
 }

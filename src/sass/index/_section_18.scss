@@ -1,8 +1,9 @@
 @charset "utf-8"; //设置中文字符
 
-.section_18{    //楼梯效果
+.section_18{
+    display: none;    //楼梯效果
     position: fixed;
-    top: 100px;
+    top: 40%;
     left: 10px;
     z-index: 11;
     width: 45px;

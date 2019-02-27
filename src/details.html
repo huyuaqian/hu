@@ -1,112 +1,150 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-	<link rel="stylesheet" type="text/css" href="css/scss.css"/>
-</head>
-<body>
-	<!--用户导航-->
-	<div class="detunav"></div>
-	<!--页面头部-->
-	<div class="detheader"></div>
-	<!--商品导航-->
-	<div class="detpnav"></div>
-	<!--主题-->
-	<div class="crumbs detwrap">
-		<a href="#">食品 </a>>
-		<a href="#">金龙鱼</a>		
-	</div>	
-	<div class="detwrap">
-		<div class="details left">
-			<div class="img_magnifier left">
-				<div class="preview">
-					<span>
-						<img src="http://pic1.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_3_pic500_3648.jpg"/>					
-						<div class="jqzoom">
-							
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/scss.css" />
+	</head>
+
+	<body>
+		<!--用户导航-->
+		<div class="detunav"></div>
+		<!--商品导航-->
+		<div class="detpnav"></div>
+		<!--主题-->
+		<div class="crumbs detwrap">
+			<a href="#">食品 </a>>
+			<a href="#">金龙鱼</a>
+		</div>
+		<div class="detwrap">
+			<div class="details left">
+				<div class="img_magnifier left">
+					<div class="preview">
+						<div id="spic">
+							<img src="http://pic1.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_3_pic500_3648.jpg" />
+							<div id="sf"></div>
 						</div>
-					</span>	
-					<div class="zoomdiv">
-						<img src="http://pic1.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_4_pic1080_4408.jpg"/>
+						<div id="bf">
+							<img src="http://pic1.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_4_pic1080_4408.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="spec_scroll">
-					<div class="det_item">
+					<div class="spec_scroll" id="ulist">
+						<div class="det_item" id="list">
+							<ul>
+								<!--<li><img src="http://pic2.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_1_pic1080_7604.jpg"/></li>
+								<li><img src="http://pic2.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_1_pic1080_7604.jpg"/></li>
+								<li><img src="http://pic2.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_1_pic1080_7604.jpg"/></li>-->
+							</ul>
+						</div>
+					</div>
+
+					<div class="share">
 						<ul>
-							<li><img src="http://pic2.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_1_pic1080_7604.jpg"/></li>
-							<li><img src="http://pic2.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_1_pic1080_7604.jpg"/></li>
-							<li><img src="http://pic2.womai.com/upload/601/603/606/6200/6201/6207/504376/504376_1_pic1080_7604.jpg"/></li>
+							<li>
+								<a href="#"><i></i>收藏</a>
+							</li>
+							<li>
+								<a href="#"><i></i>分享</a>
+							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="share">
-					<ul>
-						<li><a href="#"><i></i>收藏</a></li>
-						<li><a href="#"><i></i>分享</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="det_infor right">
-			<div class="pro_tit_top">
-				<span class="p-zy">自营</span>
-				<h1 class="p-title">金龙鱼黄金比例食用调和油(桶装 5L)</h1>
-			</div>
-			<div class="p_infor">
-				<span>
+				<div class="det_infor right">
+					<div class="pro_tit_top">
+						<span class="p-zy">自营</span>
+						<h1 class="p-title">金龙鱼黄金比例食用调和油(桶装 5L)</h1>
+					</div>
+					<div class="p_infor">
+						<span>
 					此商品为特惠商品，不参加我买网满减或用券活动，具体请见活动说明。 
 				</span>
-			</div>
-			<div class="price_wrap">
-				<div class="price_infor">
-					<span class="detprice">
-						<em>￥</em>56
+					</div>
+					<div class="price_wrap">
+						<div class="price_infor">
+							<span class="detprice">
+						￥<em>56</em>
 					</span>
-					<span class="group">
+							<span class="group">
 						抢购价
 					</span>
-					<a href="#">(降价通知)</a>
-				</div>
-				<div class="loadregion">
-					送至:<input type="text" name="address" id="address"/>
-					现在至明日16:00前完成下单预计02月24日（周日） 送达
-				</div>
-				<div class="fuwu">
-					服务:<span>由我买网发货并提供售后服务。</span>
-				</div>
-				<div class="det_number">
-					<i>数量:</i>
-					<div class="chose_amount">
-						<span class="prev">-</span>
-						<input type="text" name="number" id="number" value="1" />
-						<span class="next">+</span>
+							<a href="#">(降价通知)</a>
+						</div>
+						<div class="loadregion">
+							送至:<input type="text" name="address" id="address" /> 现在至明日16:00前完成下单预计02月24日（周日） 送达
+						</div>
+						<div class="fuwu">
+							服务:<span>由我买网发货并提供售后服务。</span>
+						</div>
+						<div class="det_number">
+							<i>数量:</i>
+							<div class="chose_amount">
+								<span class="prev">-</span>
+								<input type="text" name="number" id="number" value="1" />
+								<span class="next">+</span>
+							</div>
+						</div>
+						<div class="det_btnbox">
+							<ul>
+								<li>
+									<i></i> 加入购物车
+								</li>
+								<li>
+									<i></i> 扫一扫下单
+									<div class="erweima">
+
+									</div>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="det_btnbox">
-					<ul>
-						<li>
-							<i></i>
-							加入购物车
-						</li>
-						<li>
-							<i></i>
-							扫一扫下单
-							<div class="erweima">
-								
+			</div>
+
+		</div>
+		<!--底部-->
+		<div class="detfooter"></div>
+		<div class="alertbox">
+			<div class="alertlayout">
+
+			</div>
+			<div class="list_buy_pop alert_popup">
+				<div class="buy_pop">
+					<div class="showIncludeCart">
+						<div class="buy_pop_close"></div>
+						<div class="buy_icon"></div>
+						<div class="pop_btn_r">
+							继续购物
+						</div>
+						<div class="buy_pop_top">
+							<div class="title">
+								此商品已成功放入购物车
 							</div>
-						</li>
-					</ul>
+							<div class="font">
+								购物车共
+								<font>1</font> 件宝贝
+								<span>
+							合计 <font></font> 元
+						</span>
+							</div>
+							<div class="btn">
+								<div class="btn_1">
+									<a href="#">去购物车结算</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		</div>
-	
-	</div>
-	<!--底部-->
-	<div class="detfooter"></div>
-	
-</body>
+		<script src="script/thirdplugins/jquery.js"></script>
+		<script src="script/thirdplugins/jquery.cookie.js"></script>
+		<script src="script/js/details_ajax.js"></script>
+		<script src="script/js/move.js"></script>
+		<script src="script/js/details.js"></script>
+	</body>
+
 </html>
